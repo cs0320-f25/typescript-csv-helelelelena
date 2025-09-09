@@ -14,9 +14,27 @@ test("parseCSV yields arrays", async () => {
   expect(results[4]).toEqual(["Nim", "22"]);
 });
 
+
+
 test("parseCSV yields only arrays", async () => {
   const results = await parseCSV(PEOPLE_CSV_PATH)
   for(const row of results) {
     expect(Array.isArray(row)).toBe(true);
   }
 });
+
+test("parseCSV yields only strings for position 0", async () => {
+  const results = await parseCSV(PEOPLE_CSV_PATH)
+  expect(typeof results[0][0]).toBe("string")
+  expect(typeof results[1][0]).toBe("string")
+  expect(typeof results[2][0]).toBe("string")
+  expect(typeof results[3][0]).toBe("string")
+  expect(typeof results[4][0]).toBe("string")
+})
+
+test("parseCSV yields only ints for position 1", async () => {
+  const results = await parseCSV(PEOPLE_CSV_PATH)
+  for (const row of results) {
+    expect(Number.isInteger(Number(row[1]))).toBe(true)
+  }
+})

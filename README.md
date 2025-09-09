@@ -3,6 +3,9 @@
 ### Task C: Proposing Enhancement
 
 - #### Step 1: Brainstorm on your own.
+    Send a message to the user if they for some reason submit the wrong file // no file
+    Potentially use not only comma, but other values as separators
+    
 
 - #### Step 2: Use an LLM to help expand your perspective.
 
