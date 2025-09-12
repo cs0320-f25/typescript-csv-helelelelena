@@ -24,8 +24,13 @@ export const PersonRowSchema = z.tuple([z.string(), z.coerce.number()])
 // Mouse over it in VSCode to see what TypeScript has inferred!
 export type Person = z.infer<typeof PersonRowSchema>;
 
+export const ClassSchema = z.tuple([z.string(), z.string(), z.string(), z.string(),z.coerce.number()])
+                         .transform( tup => ({class: tup[0], code: tup[1], instructor : tup[2], comment: tup[3], num_stud: tup[4]}))
 
-export async function parseCSV<T>(path: string, schema : z.ZodType<T>): Promise<T[]> {
+export type Class = z.infer<typeof ClassSchema>;
+
+
+export async function parseCSV<T>(path: string, schema : z.ZodType<T>, hasHeader : boolean): Promise<T[]> {
   // This initial block of code reads from a file in Node.js. The "rl"
   // value can be iterated over in a "for" loop. 
   const fileStream = fs.createReadStream(path);
