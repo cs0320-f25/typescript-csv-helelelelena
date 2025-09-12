@@ -32,6 +32,8 @@
     Row mismatch (LLM):
     As a user, I want the parser to detect when a row has more or fewer fields than the header, so that I can choose what action to take (fail, pad with null, log a warning etc.) to ensure data consistency.
 
+    My initial ideas were pretty basic ones. I liked how when I prompted the AI, it answered me with questions, which helped me better think of the improvements. Most of what resonated with me were expansions of my original ideas and ideas that were some what related to my original ones.
+
 
 ### Design Choices
 
