@@ -41,12 +41,18 @@
 
 - #### 1. Correctness
 
+For the parser to be correct, it needs to properly parse the csv file, identifying its individual elements and their types. It needs to undersand the row structure and handling the edge cases, so that it faithfully reconstructs the logical table.
+
 - #### 2. Random, On-Demand Generation
+
+Instead of using specific examples, this random generation allows us to test the properties of our parser. So instead of checking 
 
 - #### 3. Overall experience, Bugs encountered and resolved
 #### Errors/Bugs:
 #### Tests:
 #### How To…
+
+I'm actually so confused with this sprint and I'm not completely sure I have successfully completed it. I wrote tests, but if they're enough. I'm confused on what bugs we are suppose to fully resolve now and what we should do in the next sprint. I understand the structure of this course, but I really wish I could just talk to TAs instead of students to clarify these more "conceptual"(?)/ assignment description questions.
 
 #### Team members and contributions (include cs logins):
 
