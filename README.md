@@ -45,7 +45,7 @@ For the parser to be correct, it needs to properly parse the csv file, identifyi
 
 - #### 2. Random, On-Demand Generation
 
-Instead of using specific examples, this random generation allows us to test the properties of our parser. So instead of checking 
+Instead of using specific examples, this random generation allows us to test the properties of our parser. Feeding it a wide variety of automatically generated inputs (edge cases with quotes, commas, newlines, and empty fields) lets us check that general structure always hold. Then, we’re not just verifying correctness on a few hand-picked cases.
 
 - #### 3. Overall experience, Bugs encountered and resolved
 #### Errors/Bugs:
